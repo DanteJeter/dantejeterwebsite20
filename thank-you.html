@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Thank You | Dante Jeter Real Estate</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    :root { --thanks-navy:#071827; --thanks-gold:#b88a3b; --thanks-cream:#f5f1e8; }
+    body { margin:0; background:var(--thanks-navy); color:#fff; }
+    .thanks-page {
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:clamp(1.25rem,4vw,3rem);
+      position:relative;
+      overflow:hidden;
+    }
+    .thanks-page::before,
+    .thanks-page::after {
+      content:"";
+      position:absolute;
+      border-radius:999px;
+      border:1px solid rgba(184,138,59,.22);
+      pointer-events:none;
+    }
+    .thanks-page::before { width:38rem; height:38rem; top:-24rem; right:-13rem; }
+    .thanks-page::after { width:28rem; height:28rem; bottom:-20rem; left:-10rem; }
+    .thanks-card {
+      width:min(760px,100%);
+      position:relative;
+      z-index:1;
+      background:#fff;
+      color:var(--thanks-navy);
+      padding:clamp(2rem,6vw,4.75rem);
+      border-radius:22px;
+      text-align:center;
+      box-shadow:0 28px 90px rgba(0,0,0,.34);
+    }
+    .thanks-mark {
+      width:4.25rem;
+      height:4.25rem;
+      display:grid;
+      place-items:center;
+      margin:0 auto 1.25rem;
+      border-radius:50%;
+      background:var(--thanks-cream);
+      color:var(--thanks-gold);
+      font-size:2.35rem;
+      font-weight:700;
+      line-height:1;
+    }
+    .thanks-card .eyebrow { margin-bottom:.65rem; }
+    .thanks-card h1 { margin:.25rem 0 1rem; font-size:clamp(2.15rem,6vw,4rem); line-height:1.04; }
+    .thanks-card p { max-width:620px; margin-left:auto; margin-right:auto; font-size:clamp(1rem,2vw,1.15rem); line-height:1.75; }
+    .thanks-details {
+      margin:1.5rem auto;
+      padding:1.15rem 1.25rem;
+      max-width:590px;
+      border:1px solid rgba(7,24,39,.12);
+      border-radius:14px;
+      background:#faf9f6;
+    }
+    .thanks-details strong { display:block; margin-bottom:.25rem; }
+    .thanks-actions { display:flex; gap:.85rem; justify-content:center; flex-wrap:wrap; margin:1.75rem 0 1.25rem; }
+    .thanks-actions .button { min-width:185px; }
+    .redirect-note { margin-top:1.25rem; font-size:.94rem !important; color:#51606d; }
+    .redirect-note strong { color:var(--thanks-navy); }
+    .thanks-secondary { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; font-size:.95rem; }
+    .thanks-secondary a { color:var(--thanks-navy); font-weight:700; text-decoration-thickness:1px; text-underline-offset:3px; }
+    @media (max-width:560px) {
+      .thanks-card { border-radius:16px; }
+      .thanks-actions { display:grid; }
+      .thanks-actions .button { width:100%; }
+    }
+  </style>
+<!-- Vercel Web Analytics — Version 19.4 -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+</head>
+<body>
+  <main class="thanks-page">
+    <section class="thanks-card" aria-labelledby="thanks-title">
+      <div class="thanks-mark" aria-hidden="true">✓</div>
+      <p class="eyebrow">Request Received</p>
+      <h1 id="thanks-title">Thank you for reaching out.</h1>
+      <p id="thanks-message">Your information has been submitted successfully. Dante will personally review your request and contact you as soon as possible.</p>
+
+      <div class="thanks-details" id="thanks-details">
+        <strong>What happens next?</strong>
+        <span>Dante will review the information you provided and follow up using your preferred contact information.</span>
+      </div>
+
+      <div class="thanks-actions">
+        <a class="button button--dark" href="tel:+13046176896">Call Dante</a>
+        <a class="button button--gold" href="mailto:dantejeterrealtor@gmail.com?subject=Real%20Estate%20Inquiry%20for%20Dante%20Jeter&amp;body=Hello%20Dante%2C%0A%0AI%27m%20reaching%20out%20from%20your%20website.%0A%0A">Email Dante</a>
+      </div>
+
+      <div class="thanks-secondary">
+        <a href="./index.html">Return Home</a>
+        <a href="./listings.html">View Current Listings</a>
+      </div>
+
+      <p class="redirect-note" role="status" aria-live="polite">Returning you to the homepage in <strong id="countdown">5</strong> seconds.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const HOME_URL = "./index.html";
+      const countdown = document.getElementById("countdown");
+      const message = document.getElementById("thanks-message");
+      const details = document.getElementById("thanks-details");
+      let seconds = 5;
+
+      try {
+        const submission = JSON.parse(sessionStorage.getItem("leadSubmission"));
+        if (submission && submission.type) {
+          const requestLabel = String(submission.type).toLowerCase();
+          message.textContent = `Your ${requestLabel} has been submitted successfully. Dante will personally review your information and contact you as soon as possible.`;
+          if (submission.property && submission.property !== "Seller Property" && submission.property !== "Dante Jeter Website") {
+            details.innerHTML = `<strong>Request details</strong><span>We received your request regarding ${submission.property}.</span>`;
+          }
+        }
+      } catch (_) {
+        // The default confirmation remains visible when session data is unavailable.
+      }
+
+      const timer = window.setInterval(function () {
+        seconds -= 1;
+        if (countdown) countdown.textContent = String(Math.max(seconds, 0));
+        if (seconds <= 0) {
+          window.clearInterval(timer);
+          window.location.replace(HOME_URL);
+        }
+      }, 1000);
+    }());
+  </script>
+</body>
+</html>

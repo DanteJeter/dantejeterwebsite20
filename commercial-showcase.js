@@ -1,0 +1,17 @@
+
+(function(){
+ const p=window.PROPERTY_DATA;if(!p)return;
+ const q=(s)=>document.querySelector(s), qa=(s)=>document.querySelectorAll(s);
+ const v=(f)=>`${p.assetBase}/${f}?v=${p.version}`;
+ const set=(s,t)=>{qa(s).forEach(e=>{e.textContent=(t===undefined||t===null||t==='')?'—':t})};
+ document.title=`${p.address} | Commercial Property | Dante Jeter`;
+ q('.commercial-hero').style.backgroundImage=`url("${v(p.hero)}"),url("assets/media-fallback.svg")`;
+ set('[data-address]',p.address);set('[data-location]',p.cityStateZip);set('[data-headline]',p.headline);set('[data-summary]',p.heroDescription);set('[data-price]',p.price);set('[data-mls]',p.mls);set('[data-status]',p.status);set('[data-acres]',p.acres);set('[data-year]',p.yearBuilt);set('[data-bays]',p.bays);set('[data-structures]',p.structures);set('[data-subtype]',p.subtype);set('[data-use]',p.currentUse);set('[data-frontage]',p.frontage);set('[data-parking]',p.parking);set('[data-office]',p.officeSpace);set('[data-restrooms]',p.restrooms);set('[data-remarks]',p.marketingRemarks);
+ const facts=q('#hero-facts'); if(facts) facts.innerHTML=(p.detailFacts||[]).map(x=>`<div class="metric"><strong>${x.value}</strong><span>${x.label}</span></div>`).join('')+`<div class="metric"><strong>${p.mls}</strong><span>MLS Number</span></div>`;
+ const hi=q('#investment-highlights');if(hi)hi.innerHTML=(p.investmentHighlights||[]).map((x,i)=>`<article class="highlight"><span>${String(i+1).padStart(2,'0')}</span><h3>${x}</h3></article>`).join('');
+ const uses=q('#use-cases');if(uses)uses.innerHTML=(p.useCases||[]).map(x=>`<div class="use-card">${x}</div>`).join('');
+ const gallery=q('#commercial-gallery');if(gallery)gallery.innerHTML=(p.photos||[]).map((x,i)=>`<button class="gallery-item" data-index="${i}" aria-label="Open ${x.alt}"><img src="${v(x.file)}" alt="${x.alt}" loading="${i?'lazy':'eager'}"></button>`).join('');
+ qa('[data-property-address-input]').forEach(x=>x.value=`${p.address}, ${p.cityStateZip}`);qa('.js-lead-form').forEach(f=>{f.dataset.listingId=p.mls;f.dataset.propertyAddress=p.address});
+ const light=q('.lightbox'), lightImg=q('.lightbox img'); gallery?.addEventListener('click',e=>{const b=e.target.closest('[data-index]');if(!b)return;const ph=p.photos[+b.dataset.index];lightImg.src=v(ph.file);lightImg.alt=ph.alt;light.classList.add('is-open')});q('.lightbox button')?.addEventListener('click',()=>light.classList.remove('is-open'));light?.addEventListener('click',e=>{if(e.target===light)light.classList.remove('is-open')});
+ const endpoint='https://formspree.io/f/xnjevznr';qa('.js-lead-form').forEach(form=>form.addEventListener('submit',async e=>{e.preventDefault();const msg=form.querySelector('.form-message'),btn=form.querySelector('button[type=submit]');btn.disabled=true;msg.textContent='Sending your request…';const raw=Object.fromEntries(new FormData(form));const payload={_subject:`Commercial Property Tour — ${p.address}`,formType:'Commercial Property Tour',propertyAddress:p.address,listingId:p.mls,...raw,pageUrl:location.href};try{const r=await fetch(endpoint,{method:'POST',headers:{Accept:'application/json','Content-Type':'application/json'},body:JSON.stringify(payload)});if(!r.ok)throw new Error('Your request could not be sent.');msg.textContent='Thank you. Your tour request has been received.';form.reset();setTimeout(()=>location.assign('thank-you.html'),700)}catch(err){msg.textContent=`${err.message} Please call Dante at (304) 617-6896.`;btn.disabled=false}}));
+})();

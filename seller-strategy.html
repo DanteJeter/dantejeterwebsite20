@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- Seller Strategy source: uploaded preview.html; website release 18.6 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dante Jeter | Seller Strategy Guide</title>
+<style>
+@page { size: Letter; margin: 0; }
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; background:#e9edf0; font-family:Arial,Helvetica,sans-serif; color:#172333; }
+body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.page { width:8.5in; height:11in; margin:0 auto 24px; background:#f8f7f3; position:relative; overflow:hidden; page-break-after:always; }
+.page:last-child{page-break-after:auto;}
+.navy{background:#10283f;color:#fff;} .gold{color:#c8a25b;} .muted{color:#66717d;}
+.eyebrow{text-transform:uppercase;letter-spacing:2.2px;font-size:10.5px;font-weight:700;}
+h1,h2,h3,h4,p{margin-top:0;} h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;}
+h1{font-size:43px;line-height:1.05;margin-bottom:18px;} h2{font-size:29px;line-height:1.15;margin-bottom:12px;color:#10283f;}
+h3{font-size:13px;line-height:1.25;text-transform:uppercase;letter-spacing:1.35px;margin-bottom:7px;color:#10283f;} p{font-size:14px;line-height:1.58;}
+.brand{display:flex;align-items:center;gap:12px}.brandmark{width:48px;height:48px;border:1.5px solid #c8a25b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:20px;letter-spacing:1px;color:#c8a25b}.brandname{font-size:16px;font-weight:700}.brandsub{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;opacity:.75;margin-top:3px}
+.cover-top{height:69%;padding:52px 58px;position:relative}.cover-top:after{content:"";position:absolute;right:-95px;bottom:-110px;width:340px;height:340px;border:1px solid rgba(200,162,91,.35);border-radius:50%}.cover-top:before{content:"";position:absolute;right:-25px;bottom:-35px;width:205px;height:205px;border:1px solid rgba(200,162,91,.18);border-radius:50%}.cover-copy{margin-top:88px;width:79%;position:relative;z-index:2}.cover-kicker{font-size:11px;text-transform:uppercase;letter-spacing:2.4px;color:#c8a25b;font-weight:700;margin-bottom:13px}.cover-sub{font-size:18px;line-height:1.52;color:#dfe5ea;max-width:565px}.cover-bottom{height:31%;padding:34px 58px 36px;display:flex;flex-direction:column;justify-content:space-between}.quote{font-family:Georgia,serif;font-size:24px;line-height:1.34;color:#10283f}.footerline{display:flex;justify-content:space-between;align-items:flex-end;font-size:10.5px;color:#6d747b}.footerline strong{color:#10283f}
+.page-pad{padding:48px 58px 42px}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;margin-bottom:16px}.section-head .intro{width:76%}.page-num{font-family:Georgia,serif;color:#c8a25b;font-size:25px}.rule{height:1px;background:#d6d0c5;margin:14px 0 22px}.lead{font-size:16px;line-height:1.55;color:#334153}.goldbar{width:54px;height:3px;background:#c8a25b;margin:14px 0 16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid #d7d1c6;padding:19px;}.card p{font-size:12.8px;line-height:1.48;color:#4d5965;margin-bottom:0}.card .num{font-family:Georgia,serif;color:#c8a25b;font-size:27px;margin-bottom:7px}.card.dark{background:#10283f;border-color:#10283f;color:#fff}.card.dark h3{color:#c8a25b}.card.dark p{color:#e1e6ea}
+.callout{background:#10283f;color:#fff;padding:22px 25px;margin-top:18px;display:grid;grid-template-columns:118px 1fr;gap:20px;align-items:center}.callout .label{font-size:10px;text-transform:uppercase;letter-spacing:1.6px;color:#c8a25b;font-weight:700}.callout p{font-family:Georgia,serif;font-size:18px;line-height:1.42;margin:0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:13px;align-items:start;margin-bottom:15px}.badge{width:29px;height:29px;border-radius:50%;background:#10283f;color:#c8a25b;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}.step p{font-size:12.7px;line-height:1.45;margin:0;color:#4d5965}.step h3{margin-bottom:4px}
+.band{margin:18px -58px 20px;padding:20px 58px;background:#e9edf0;border-top:1px solid #d8dde1;border-bottom:1px solid #d8dde1}.band p{margin:0;font-family:Georgia,serif;font-size:19px;line-height:1.4;color:#10283f}
+.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.metric{border-top:3px solid #c8a25b;background:#fff;padding:15px}.metric strong{display:block;font-family:Georgia,serif;font-size:20px;color:#10283f;margin-bottom:5px}.metric span{font-size:11.5px;line-height:1.35;color:#63707b}
+.table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d6d0c5}.table th{background:#10283f;color:#fff;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:1px;padding:11px 12px}.table td{font-size:11.5px;line-height:1.35;padding:10px 12px;border-bottom:1px solid #e2ddd4;vertical-align:top}.table tr:last-child td{border-bottom:0}.table td:first-child{font-weight:700;color:#10283f;width:29%}
+.split{display:grid;grid-template-columns:1.08fr .92fr;gap:20px}.panel{background:#fff;border:1px solid #d6d0c5;padding:19px}.panel h2{font-size:23px}.panel ul{padding-left:17px;margin:8px 0 0}.panel li{font-size:12.5px;line-height:1.45;margin-bottom:6px;color:#46535f}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:14px}.timeline .t{background:#fff;border-top:3px solid #c8a25b;padding:12px 9px;min-height:95px}.timeline .t strong{display:block;color:#10283f;font-size:11.5px;margin-bottom:5px}.timeline .t span{font-size:10.5px;line-height:1.35;color:#5b6671}
+.promise{background:#10283f;color:#fff;padding:25px}.promise h2{color:#fff;font-size:25px}.promise p{color:#e1e6ea;font-size:13.5px}.contact{background:#fff;border:1px solid #d6d0c5;padding:23px}.contact .name{font-family:Georgia,serif;font-size:24px;color:#10283f;margin-bottom:5px}.contact p{font-size:12px;line-height:1.5;margin-bottom:7px}.contact a{color:#10283f;text-decoration:none;font-weight:700}
+.disclaimer{position:absolute;left:58px;right:58px;bottom:21px;font-size:8.5px;line-height:1.35;color:#7c8288}.page-title{font-family:Georgia,serif;font-size:38px;color:#10283f;line-height:1.08;margin:0 0 10px}.tiny{font-size:10.5px;line-height:1.35;color:#727b84}
+@media print{body{background:#fff}.page{margin:0;height:10.98in}}
+
+/* Website integration — Version 18.6 */
+.strategy-sitebar{position:sticky;top:0;z-index:1000;background:rgba(7,24,39,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.12)}
+.strategy-sitebar-inner{width:min(1160px,92%);margin:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.strategy-brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:800}
+.strategy-brand img{width:44px;height:44px;object-fit:cover;border-radius:50%;border:2px solid #c8a25b}
+.strategy-brand span{display:flex;flex-direction:column;line-height:1.05}.strategy-brand small{font-weight:600;color:#cbd4dc;font-size:.72rem;margin-top:4px}
+.strategy-nav{display:flex;align-items:center;gap:20px}.strategy-nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.92rem}.strategy-nav a:hover{color:#e6bd70}
+.strategy-nav .strategy-cta{background:#c8a25b;color:#071827;padding:11px 16px;border-radius:999px}
+.strategy-next-step{background:#10283f;color:#fff;padding:64px 0;margin-top:8px}
+.strategy-next-inner{width:min(1160px,92%);margin:auto;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center}
+.strategy-next-step .eyebrow{color:#c8a25b;margin-bottom:10px}.strategy-next-step h2{color:#fff;font-size:clamp(2rem,4vw,3.5rem);margin-bottom:12px}
+.strategy-next-step p{color:#dfe5ea;max-width:760px;font-size:16px;margin:0}.strategy-next-step .essentials-subtitle{display:block;color:#c8a25b;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:11px;margin-bottom:8px}
+.strategy-next-step a{display:inline-block;background:#c8a25b;color:#071827;text-decoration:none;font-weight:800;padding:15px 22px;border-radius:999px;white-space:nowrap}
+.strategy-web-footer{background:#071827;color:#d7e0e8;padding:28px 0;font-size:12px;line-height:1.5}.strategy-web-footer .inner{width:min(1160px,92%);margin:auto;display:flex;justify-content:space-between;gap:24px}.strategy-web-footer a{color:#fff}
+@media screen and (max-width:900px){
+  .strategy-sitebar-inner{min-height:64px}.strategy-nav a:not(.strategy-cta){display:none}.strategy-brand small{display:none}
+  .page{width:100%;height:auto;min-height:0;margin:0 0 14px;overflow:visible}.cover-top,.cover-bottom{height:auto}.cover-top{padding:38px 24px 46px}.cover-copy{margin-top:54px;width:100%}.cover-bottom{padding:28px 24px}.page-pad{padding:34px 24px}
+  .grid2,.grid3,.split,.metric-row,.timeline{grid-template-columns:1fr}.section-head{gap:14px}.section-head .intro{width:auto}.band{margin:18px -24px 20px;padding:20px 24px}.callout{grid-template-columns:1fr}.disclaimer{position:static;margin-top:26px}
+  .strategy-next-inner{grid-template-columns:1fr}.strategy-web-footer .inner{flex-direction:column}
+}
+@media print{.strategy-sitebar,.strategy-next-step,.strategy-web-footer{display:none!important}}
+
+</style>
+<!-- Vercel Web Analytics — Version 19.4 -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+</head>
+<body>
+
+<div class="strategy-sitebar"><div class="strategy-sitebar-inner">
+<a class="strategy-brand" href="index.html"><img src="assets/dante-headshot-300.jpg" alt="Dante Jeter"><span>Dante Jeter<small>REALTOR® · WV &amp; OH</small></span></a>
+<nav class="strategy-nav" aria-label="Seller strategy navigation"><a href="index.html">Home</a><a href="listings.html">Listings</a><a href="seller-essentials.html">Seller Essentials</a><a href="index.html#home-value">Home Value</a><a class="strategy-cta" href="index.html#contact">Schedule a Consultation</a></nav>
+</div></div>
+
+
+<section class="page">
+  <div class="cover-top navy">
+    <div class="brand"><div class="brandmark">DJ</div><div><div class="brandname">Dante Jeter</div><div class="brandsub">REALTOR® | RE/MAX Broadwater</div></div></div>
+    <div class="cover-copy">
+      <div class="cover-kicker">Seller Strategy Guide</div>
+      <h1>A smarter way to prepare, position, and sell your home.</h1>
+      <p class="cover-sub">Selling well is not one decision. It is a series of decisions about preparation, price, presentation, exposure, negotiation, and timing. This guide explains the strategy behind those decisions.</p>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div><div class="eyebrow gold">Professional Seller Representation</div><div class="goldbar"></div><div class="quote">Experience You Can Trust.<br>Guidance You Can Count On.<br>Results That Matter.</div></div>
+    <div class="footerline"><div><strong>Licensed in West Virginia & Ohio</strong><br>Serving the Northern Panhandle and surrounding Ohio Valley communities</div><div style="text-align:right"><strong>DanteJeter.com</strong><br>Seller Strategy Guide</div></div>
+  </div>
+</section>
+
+<section class="page page-pad">
+  <div class="section-head"><div class="intro"><div class="eyebrow gold">The Strategy Begins With You</div><h2>The best plan starts with your priorities, not a sales pitch.</h2></div><div class="page-num">02</div></div>
+  <div class="rule"></div>
+  <p class="lead">Every seller has a different reason for moving, a different timeline, and a different definition of success. Before recommending price or marketing, I want to understand what matters most to you.</p>
+  <div class="grid2">
+    <div class="card"><div class="num">01</div><h3>Your Objective</h3><p>Why are you considering a sale? Is the priority maximizing net proceeds, simplifying the move, coordinating another purchase, reducing uncertainty, or achieving a particular timeline?</p></div>
+    <div class="card"><div class="num">02</div><h3>Your Property</h3><p>Condition, updates, maintenance, layout, location, and buyer appeal all influence how a property should be prepared and positioned.</p></div>
+    <div class="card"><div class="num">03</div><h3>Your Timing</h3><p>Some sellers need speed. Others have flexibility. Timing can influence pricing, showing strategy, negotiation leverage, and the terms we favor in an offer.</p></div>
+    <div class="card"><div class="num">04</div><h3>Your Risk Tolerance</h3><p>A higher offer is not always the strongest offer. Financing, appraisal, inspections, contingencies, concessions, and closing dependencies all matter.</p></div>
+  </div>
+  <div class="band"><p>My responsibility is not to make the decision for you. It is to make sure you understand the evidence, options, risks, and likely consequences before you decide.</p></div>
+  <div class="grid3">
+    <div class="card dark"><h3>Listen</h3><p>Understand your goals, concerns, timing, and expectations before recommending a strategy.</p></div>
+    <div class="card dark"><h3>Analyze</h3><p>Evaluate the property and current market evidence instead of relying on assumptions or generic averages.</p></div>
+    <div class="card dark"><h3>Advise</h3><p>Explain options clearly so you can make informed decisions throughout the sale.</p></div>
+  </div>
+  <div class="disclaimer">This guide is educational and is not a comparative market analysis, guarantee of value, listing agreement, legal advice, or tax advice. Recommendations are property-specific and depend on current market evidence, seller objectives, and applicable brokerage requirements.</div>
+</section>
+
+<section class="page page-pad">
+  <div class="section-head"><div class="intro"><div class="eyebrow gold">Pricing Strategy</div><h2>Price is a strategy, not a guess.</h2></div><div class="page-num">03</div></div>
+  <div class="rule"></div>
+  <p class="lead">The asking price is one of the strongest signals a seller sends to the market. The objective is not simply to choose the highest number. It is to position the property so qualified buyers understand its value and are motivated to act.</p>
+  <div class="split">
+    <div>
+      <div class="step"><div class="badge">1</div><div><h3>Recently Sold</h3><p>Shows what buyers have actually paid for relevant properties.</p></div></div>
+      <div class="step"><div class="badge">2</div><div><h3>Active Competition</h3><p>Shows the alternatives buyers can choose today and where your home will compete for attention.</p></div></div>
+      <div class="step"><div class="badge">3</div><div><h3>Pending Activity</h3><p>When reliable information is available, pending homes can help identify what buyers are selecting now.</p></div></div>
+      <div class="step"><div class="badge">4</div><div><h3>Market Response</h3><p>Days on market, price reductions, showing activity, and buyer feedback can reveal whether a strategy is working.</p></div></div>
+    </div>
+    <div class="panel">
+      <div class="eyebrow gold">The Principle</div>
+      <h2>The seller sets the asking price. The market determines the response.</h2>
+      <p>My role is to provide the strongest available evidence and explain the tradeoffs of each pricing position.</p>
+      <p class="tiny">No pricing strategy can guarantee a specific sale price or timeframe. Market conditions can change after a property is listed.</p>
+    </div>
+  </div>
+  <div class="metric-row">
+    <div class="metric"><strong>Market Entry</strong><span>Designed to generate attention quickly and compete aggressively for buyer interest.</span></div>
+    <div class="metric"><strong>Market Based</strong><span>Positioned around the strongest comparable evidence and current competition.</span></div>
+    <div class="metric"><strong>Aspirational</strong><span>Tests the upper market range, with greater risk of longer exposure or later price adjustments.</span></div>
+  </div>
+  <div class="callout"><div class="label">What We Watch</div><p>Once the home is active, the market starts giving us information. Strong representation means paying attention to that information and adjusting when the evidence supports a change.</p></div>
+  <div class="disclaimer">Comparative market analysis is not an appraisal. Final value is determined by the market, and financing transactions may also depend on an independent appraisal.</div>
+</section>
+
+<section class="page page-pad">
+  <div class="section-head"><div class="intro"><div class="eyebrow gold">Presentation & Marketing</div><h2>Your home's first showing often happens online.</h2></div><div class="page-num">04</div></div>
+  <div class="rule"></div>
+  <p class="lead">Before a buyer schedules a showing, the property usually has to earn attention on a screen. That makes presentation, clarity, and digital accessibility part of the selling strategy, not an afterthought.</p>
+  <div class="grid2">
+    <div class="card"><div class="num">01</div><h3>Prepare</h3><p>Review condition, repairs, presentation, access, disclosures, and the practical steps needed to bring the property to market.</p></div>
+    <div class="card"><div class="num">02</div><h3>Position</h3><p>Develop the pricing and launch strategy around the property's strengths, competition, and seller objectives.</p></div>
+    <div class="card"><div class="num">03</div><h3>Present</h3><p>Use quality photography, professional listing copy, accurate property information, and a clear visual story that helps buyers understand the home.</p></div>
+    <div class="card"><div class="num">04</div><h3>Promote</h3><p>Use MLS exposure, major real estate portals, social media, direct sharing, and digital property resources when appropriate.</p></div>
+  </div>
+  <div class="band"><p>More than a listing. A complete marketing experience designed to inform, engage, and make the property easy to understand and share.</p></div>
+  <div class="split">
+    <div class="panel"><div class="eyebrow gold">Dedicated Property Experience</div><h2>A stronger digital home for the listing.</h2><p>Featured properties can receive a dedicated webpage with photography, property highlights, description, contact options, and a focused call to action.</p><ul><li>Mobile-friendly property presentation</li><li>Shareable link for social and direct marketing</li><li>Property-specific information in one place</li><li>Clear contact and inquiry path</li></ul></div>
+    <div class="panel"><div class="eyebrow gold">Why It Matters</div><h2>Attention is only useful if it becomes understanding.</h2><p>Good marketing does not simply create more noise. It helps the right buyer understand the property quickly enough to decide whether to take the next step.</p><p class="tiny">Marketing methods vary by property, brokerage requirements, MLS rules, seller authorization, and applicable advertising standards.</p></div>
+  </div>
+  <div class="disclaimer">Photos, edited media, public remarks, concessions, showing instructions, and marketing content are handled subject to applicable MLS, brokerage, Fair Housing, state, and federal requirements.</div>
+</section>
+
+<section class="page page-pad">
+  <div class="section-head"><div class="intro"><div class="eyebrow gold">Communication & Market Management</div><h2>You should never have to wonder what is happening.</h2></div><div class="page-num">05</div></div>
+  <div class="rule"></div>
+  <p class="lead">Listing a property is not a set-it-and-forget-it process. Once the home is active, we watch the market, communicate what is happening, and use the information we receive to guide the next decision.</p>
+  <div class="grid3">
+    <div class="card dark"><h3>Activity</h3><p>Showings, inquiries, online attention, competing inventory, and new market developments.</p></div>
+    <div class="card dark"><h3>Feedback</h3><p>Buyer and agent feedback when available, including recurring concerns that may affect marketability.</p></div>
+    <div class="card dark"><h3>Response</h3><p>Recommendations based on evidence, not emotion, when price, presentation, access, or strategy may need adjustment.</p></div>
+  </div>
+  <div class="band"><p>Silence creates uncertainty. Consistent communication turns market activity into useful information.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>What I Communicate</h3><p>Showing activity, feedback, offer developments, important market changes, competing listings, inspection and appraisal milestones, and transaction issues that require your attention.</p></div>
+    <div class="card"><h3>What I Need From You</h3><p>Timely decisions, accurate property information, reasonable showing access, disclosure of known material facts as required, and open communication when your priorities change.</p></div>
+    <div class="card"><h3>Showing Strategy</h3><p>We will discuss access, presentation, scheduling, security, seller preferences, and how to make the home reasonably available to qualified buyers.</p></div>
+    <div class="card"><h3>Strategy Reviews</h3><p>If the market response differs from expectations, we review the evidence together and decide whether the current strategy still makes sense.</p></div>
+  </div>
+  <div class="callout"><div class="label">My Commitment</div><p>I will explain what I am seeing, what I believe it means, and what options are available. You remain in control of the final decision.</p></div>
+  <div class="disclaimer">Showing access, lockbox use, occupancy information, and seller instructions are handled in accordance with seller authorization, brokerage policy, and applicable MLS rules.</div>
+</section>
+
+<section class="page page-pad">
+  <div class="section-head"><div class="intro"><div class="eyebrow gold">Offers & Negotiation</div><h2>The highest price is not automatically the best offer.</h2></div><div class="page-num">06</div></div>
+  <div class="rule"></div>
+  <p class="lead">An offer is a package of price, costs, contingencies, financing, timing, and risk. My job is to help you see the whole package so you can compare offers intelligently.</p>
+  <table class="table">
+    <thead><tr><th>Factor</th><th>What We Evaluate</th></tr></thead>
+    <tbody>
+      <tr><td>Purchase Price</td><td>The headline number and how it compares with the property's market position.</td></tr>
+      <tr><td>Estimated Seller Net</td><td>Price adjusted for concessions, compensation, and other transaction-specific seller costs.</td></tr>
+      <tr><td>Financing</td><td>Cash or loan type, lender strength when known, financing deadlines, and dependencies.</td></tr>
+      <tr><td>Appraisal</td><td>Whether the transaction depends on an appraisal and how valuation risk may affect closing.</td></tr>
+      <tr><td>Inspection</td><td>Inspection rights, deadlines, and the potential for repair requests or renegotiation.</td></tr>
+      <tr><td>Contingencies</td><td>Conditions that must occur before the buyer is obligated to close.</td></tr>
+      <tr><td>Earnest Money</td><td>The amount and terms associated with the buyer's deposit, subject to the contract.</td></tr>
+      <tr><td>Closing & Possession</td><td>How the proposed timing fits your move and other obligations.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout"><div class="label">Negotiation</div><p>My negotiation approach is deliberate: understand the interests, identify leverage, communicate clearly, avoid unnecessary emotion, and help you evaluate the consequences of each option.</p></div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="card"><h3>Basic Offer Review</h3><p>Looks primarily at purchase price and forwards terms without a structured comparison.</p></div>
+    <div class="card"><h3>Strategic Offer Review</h3><p>Compares net, contingencies, financing, deadlines, inspection, appraisal, timing, and transaction risk before the seller decides.</p></div>
+  </div>
+  <div class="disclaimer">Estimated net proceeds are illustrative until verified by the closing professional. Contract terms, legal rights, and tax consequences should be reviewed with the appropriate attorney, title professional, lender, accountant, or other qualified advisor when needed.</div>
+</section>
+
+<section class="page page-pad">
+  <div class="section-head"><div class="intro"><div class="eyebrow gold">Contract to Closing</div><h2>An accepted offer is a milestone, not the finish line.</h2></div><div class="page-num">07</div></div>
+  <div class="rule"></div>
+  <p class="lead">Once a contract is accepted, the focus shifts from marketing to execution. Deadlines, access, inspections, appraisal, financing, title work, and communication all have to stay coordinated.</p>
+  <div class="timeline">
+    <div class="t"><strong>1. Contract</strong><span>Executed documents, deposits, deadlines, and closing instructions.</span></div>
+    <div class="t"><strong>2. Inspection</strong><span>Access, reports, repair requests, and any negotiated resolution.</span></div>
+    <div class="t"><strong>3. Financing</strong><span>Loan process, appraisal, lender conditions, and progress toward approval.</span></div>
+    <div class="t"><strong>4. Title</strong><span>Title work, settlement preparation, payoff coordination, and required documents.</span></div>
+    <div class="t"><strong>5. Closing</strong><span>Final walkthrough, signing, transfer, and completion of the transaction.</span></div>
+  </div>
+  <div class="band"><p>My responsibility does not end when your property goes under contract. I remain engaged through the transaction and help keep the right people, information, and deadlines connected.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Coordination</h3><p>Communicate with the cooperating agent, lender, inspector, appraiser, title or closing professional, and brokerage as the transaction progresses.</p></div>
+    <div class="card"><h3>Problem Solving</h3><p>When an issue arises, identify what is known, what needs to be verified, what options exist, and what decision belongs to you.</p></div>
+    <div class="card"><h3>Documentation</h3><p>Keep transaction documents and requested changes moving through the proper channels and signatures.</p></div>
+    <div class="card"><h3>Closing Readiness</h3><p>Help you understand upcoming milestones and what may be needed before the final transfer.</p></div>
+  </div>
+  <div class="callout"><div class="label">The Goal</div><p>Reduce avoidable surprises, keep communication clear, and protect the seller's ability to make informed decisions from contract through closing.</p></div>
+  <div class="disclaimer">The REALTOR® coordinates the real estate transaction but does not replace attorneys, inspectors, appraisers, lenders, title professionals, contractors, accountants, or other licensed specialists.</div>
+</section>
+
+<section class="page page-pad">
+  <div class="section-head"><div class="intro"><div class="eyebrow gold">My Commitment to You</div><h2>Professional representation should feel prepared, clear, and accountable.</h2></div><div class="page-num">08</div></div>
+  <div class="rule"></div>
+  <div class="split">
+    <div class="promise">
+      <div class="eyebrow gold">Seller Representation</div>
+      <h2>I will represent your property professionally, communicate honestly, protect your interests, and provide the information you need to make confident decisions.</h2>
+      <p>I will not promise outcomes the market cannot support, but I will provide the preparation, strategy, effort, communication, and advocacy your sale deserves.</p>
+      <p style="margin-bottom:0">If we decide to work together, the next step is to build a property-specific plan based on your goals and the current market.</p>
+    </div>
+    <div class="contact">
+      <div class="eyebrow gold">Dante Jeter</div>
+      <div class="name">REALTOR®</div>
+      <p><strong>RE/MAX Broadwater</strong></p>
+      <p><strong>Phone:</strong><br><a href="tel:+13046176896">304-617-6896</a></p>
+      <p><strong>Email:</strong><br><a href="mailto:DanteJeterRealtor@gmail.com">DanteJeterRealtor@gmail.com</a></p>
+      <p><strong>Web:</strong><br><a href="https://www.dantejeter.com">DanteJeter.com</a></p>
+      <p>SRS | RENE | SFR<br>Licensed in West Virginia & Ohio</p>
+    </div>
+  </div>
+  <div class="goldbar" style="margin-top:30px"></div>
+  <h2 class="page-title">A good sale starts with a good decision.</h2>
+  <p class="lead" style="max-width:650px">My goal is to make sure each decision is supported by evidence, explained clearly, and aligned with what matters most to you.</p>
+  <div class="grid3" style="margin-top:24px">
+    <div class="metric"><strong>Prepare</strong><span>Understand the property, your priorities, and the market.</span></div>
+    <div class="metric"><strong>Position</strong><span>Build a pricing and marketing strategy that makes sense.</span></div>
+    <div class="metric"><strong>Represent</strong><span>Communicate, negotiate, and manage the transaction through closing.</span></div>
+  </div>
+  <div class="disclaimer">Dante Jeter is a REALTOR® with RE/MAX Broadwater, licensed in West Virginia and Ohio. Professional designations and experience describe training and background and do not guarantee a sales price, timeframe, or transaction outcome. Equal Housing Opportunity. Specific brokerage and licensing disclosures should be reviewed for the property and jurisdiction involved.</div>
+</section>
+
+
+<section class="strategy-next-step" aria-labelledby="seller-essentials-next"><div class="strategy-next-inner">
+<div><div class="eyebrow">Practical Preparation Companion</div><h2 id="seller-essentials-next">Turn preparation into a market strategy.</h2>
+<span class="essentials-subtitle">Access the Seller Essentials here</span>
+<p>The Seller Strategy Guide explains the decisions behind a successful sale. The Seller Essentials Guide gives you the practical preparation checklist to help get the property market-ready before those decisions become urgent.</p></div>
+<a href="seller-essentials.html">Access Seller Essentials →</a>
+</div></section>
+<footer class="strategy-web-footer"><div class="inner"><div><strong>Dante Jeter, REALTOR®</strong><br>RE/MAX Broadwater · Licensed in West Virginia &amp; Ohio</div><div><a href="index.html">Home</a> · <a href="seller-essentials.html">Seller Essentials</a> · <a href="brokerage-licensing.html">Brokerage &amp; Licensing</a></div></div></footer>
+
+</body>
+</html>
